@@ -1,0 +1,2 @@
+D:\PoC\PracticeApp\PracticeApp\PracticeApp.csproj;x86
+D:\PoC\PracticeApp\Sensors.Dht\Sensors.Dht.vcxproj;x86

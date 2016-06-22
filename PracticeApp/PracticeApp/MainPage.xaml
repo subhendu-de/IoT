@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="PracticeApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PracticeApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:PracticeApp.Models"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <x:Double x:Key="DashboardFontSize">25</x:Double>
+        <Thickness x:Key="BorderThickness">2</Thickness>
+        <Thickness x:Key="BorderMargin">3,3,3,3</Thickness>
+        <SolidColorBrush x:Key="BorderColor">#FF0063B1</SolidColorBrush>
+        <SolidColorBrush x:Key="DashboardHeaderTextColor">#FF0063B1</SolidColorBrush>
+        <SolidColorBrush x:Key="DashboardTextColor">White</SolidColorBrush>
+        <SolidColorBrush x:Key="DisplayHeaderTextColor">Yellow</SolidColorBrush>
+        <SolidColorBrush x:Key="DisplayTextColor">White</SolidColorBrush>
+    </Page.Resources>
+
+    <Grid Background="Black" Name="grdDashboard">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0"
+                       Grid.Row="1"
+                       Text="Humidity"
+                       FontSize="50"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Foreground="{StaticResource DisplayHeaderTextColor}" />
+
+        <TextBlock Grid.Column="0"
+                       Grid.Row="2"
+                       Text="{Binding HumidityDisplay}"
+                       FontSize="90"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       Margin="10,10,10,10"
+                       Foreground="{StaticResource DisplayTextColor}" />
+
+        <TextBlock Grid.Column="1"
+                       Grid.Row="1"
+                       Text="Temperature"
+                       FontSize="50"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Foreground="{StaticResource DisplayHeaderTextColor}" />
+
+        <TextBlock Grid.Column="1"
+                       Grid.Row="2"
+                       Text="{Binding TemperatureDisplay}"
+                       FontSize="90"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       Margin="10,10,10,10"
+                       Foreground="{StaticResource DisplayTextColor}" />
+
+    </Grid>
+</Page>

@@ -1,0 +1,2 @@
+D:\PoC\PracticeApp\PracticeApp\PracticeApp.csproj;arm
+D:\PoC\PracticeApp\Sensors.Dht\Sensors.Dht.vcxproj;arm
